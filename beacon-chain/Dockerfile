@@ -1,5 +1,5 @@
 ARG UPSTREAM_VERSION
-FROM gnosischain/prysm-beacon:${UPSTREAM_VERSION}-chiado
+FROM gnosischain/lighthouse-beacon:${UPSTREAM_VERSION}-chiado
 
 RUN apt update && apt update --yes && \
     wget -q https://github.com/gnosischain/lighthouse-client/blob/main/chiado/config.yaml -O  config.yml && \
