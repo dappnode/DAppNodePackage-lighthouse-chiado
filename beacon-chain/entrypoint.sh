@@ -8,8 +8,8 @@
 exec lighthouse \
     --network gnosis \
     --debug-level $DEBUG_LEVEL \
-    --paramsFile=config.yaml \
-    --genesisStateFile=/genesis.ssz \
+    --paramsFile=/usr/config.yaml \
+    --genesisStateFile=/usr/genesis.ssz \
     beacon_node \
     --datadir /root/.lighthouse \
     --http \
