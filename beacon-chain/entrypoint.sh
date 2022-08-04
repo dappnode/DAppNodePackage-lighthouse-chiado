@@ -6,7 +6,10 @@
 ##Required to add the bootnode flag and config file flag
 
 exec lighthouse \
+    --network gnosis \
     --debug-level $DEBUG_LEVEL \
+    --paramsFile=config.yaml \
+    --genesisStateFile=/genesis.ssz \
     beacon_node \
     --datadir /root/.lighthouse \
     --http \
