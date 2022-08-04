@@ -28,9 +28,6 @@
       "docs": "https://lighthouse-book.sigmaprime.io/"
     },
     "license": "Apache-2.0",
-    "requirements": {
-      "minimumDappnodeVersion": "0.2.51"
-    },
     "chain": {
       "driver": "ethereum-beacon-chain",
       "serviceName": "beacon-chain",
