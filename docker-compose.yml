@@ -1,0 +1,42 @@
+version: "3.5"
+services:
+  beacon-chain:
+    image: "beacon-chain.lighthouse-chiado.public.dappnode.eth:0.1.0"
+    build:
+      context: beacon-chain
+      args:
+        UPSTREAM_VERSION: v2.5.1
+    volumes:
+      - "beacon-data:/root/.lighthouse"
+    ports:
+      - "19054:19054/tcp"
+      - "19054:19054/udp"
+    restart: unless-stopped
+    security_opt:
+      - "seccomp:unconfined"
+    environment:
+      DEBUG_LEVEL: info
+      BEACON_API_PORT: 3500
+      HTTP_ENGINE: "http://chiado-nethermind.dappnode:8551"
+      CORSDOMAIN: "http://lighthouse.dappnode"
+      P2P_PORT: 19054
+      CHECKPOINT_SYNC_URL: ""
+      EXTRA_OPTS: ""
+  validator:
+    image: "validator.lighthouse-chiado.public.dappnode.eth:0.1.0"
+    build:
+      context: validator
+      args:
+        UPSTREAM_VERSION: v2.5.1
+    restart: unless-stopped
+    security_opt:
+      - "seccomp:unconfined"
+    environment:
+      DEBUG_LEVEL: info
+      HTTP_WEB3SIGNER: "http://web3signer.web3signer-chiado.dappnode:9000"
+      BEACON_NODE_ADDR: "http://beacon-chain.lighthouse-chiado.dappnode:3500"
+      GRAFFITI: validating_from_DAppNode
+      EXTRA_OPTS: ""
+      FEE_RECIPIENT_ADDRESS: ""
+volumes:
+  beacon-data: {}
