@@ -1,9 +1,9 @@
 ARG UPSTREAM_VERSION
-FROM sigp/lighthouse:${UPSTREAM_VERSION}
+FROM gnosischain/prysm-beacon:${UPSTREAM_VERSION}-chiado
 
-RUN apt update && apt install curl --yes && \
-    curl https://raw.githubusercontent.com/gnosischain/consensus-deployment-ansible/master/chiado/custom_config_data/bootnodes_consensus.txt -o bootnodes.yaml && \
-    curl https://github.com/gnosischain/consensus-deployment-ansible/blob/master/chiado/custom_config_data/config.yamll -o config.yml
+RUN apt update && apt update --yes && \
+    wget -q https://github.com/gnosischain/lighthouse-client/blob/main/chiado/config.yaml -O  config.yml && \
+    wget -q https://github.com/gnosischain/lighthouse-client/blob/main/chiado/genesis.ssz?raw=true -O genesis.ssz
 
 COPY entrypoint.sh entrypoint.sh
 COPY jwtsecret.hex /jwtsecret
