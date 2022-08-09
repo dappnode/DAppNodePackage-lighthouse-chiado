@@ -1,7 +1,7 @@
 version: "3.5"
 services:
   beacon-chain:
-    image: "beacon-chain.lighthouse-chiado.public.dappnode.eth:0.1.0"
+    image: "beacon-chain.lighthouse-chiado.dnp.dappnode.eth:0.1.0"
     build:
       context: beacon-chain
       args:
@@ -23,7 +23,7 @@ services:
       CHECKPOINT_SYNC_URL: ""
       EXTRA_OPTS: ""
   validator:
-    image: "validator.lighthouse-chiado.public.dappnode.eth:0.1.0"
+    image: "validator.lighthouse-chiado.dnp.dappnode.eth:0.1.0"
     build:
       context: validator
       args:
