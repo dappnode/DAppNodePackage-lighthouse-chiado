@@ -48,9 +48,9 @@ fi
 
 exec -c lighthouse \
     --debug-level=${DEBUG_LEVEL} \
-    --network=${NETWORK} \
     validator \
     --init-slashing-protection \
+    --testnet-dir=/usr/testnet_data \
     --datadir /root/.lighthouse \
     --beacon-nodes $BEACON_NODE_ADDR \
     --graffiti="$GRAFFITI" \
