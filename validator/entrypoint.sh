@@ -65,4 +65,3 @@ exec -c lighthouse \
     --metrics-allow-origin "*" \
     --suggested-fee-recipient="${FEE_RECIPIENT_ADDRESS}" \
     $EXTRA_OPTS
-#     --suggested-fee-recipient $FEE_RECIPIENT_ADDRESS \ 
