@@ -63,6 +63,6 @@ exec -c lighthouse \
     --metrics-address 0.0.0.0 \
     --metrics-port 8008 \
     --metrics-allow-origin "*" \
+    --suggested-fee-recipient="${FEE_RECIPIENT_ADDRESS}" \
     $EXTRA_OPTS
-
-#    --suggested-fee-recipient="${FEE_RECIPIENT_ADDRESS}" \ remove this flag
+#     --suggested-fee-recipient $FEE_RECIPIENT_ADDRESS \ 
