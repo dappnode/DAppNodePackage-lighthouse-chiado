@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Concatenate EXTRA_OPTS string
-[[ -n "$CHECKPOINT_SYNC_URL" ]] && EXTRA_OPTS="${EXTRA_OPTS} --checkpoint-sync-url=${CHECKPOINT_SYNC_URL}"
-
 ## The configuration for the testnet chiado is done throught the --testnet-dir, this dir contains the files for running chiado
 
 exec lighthouse \
