@@ -9,6 +9,6 @@ RUN chmod +x /usr/local/bin/entrypoint.sh
 
 EXPOSE $BEACON_API_PORT
 
-EXPOSE 9000
+EXPOSE $P2P_PORT
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
