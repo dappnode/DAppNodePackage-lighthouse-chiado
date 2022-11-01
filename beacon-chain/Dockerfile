@@ -1,6 +1,5 @@
 ARG UPSTREAM_VERSION
-FROM sigp/lighthouse:${UPSTREAM_VERSION}
-
+FROM gnosischain/lighthouse-beacon:${UPSTREAM_VERSION}-chiado
 COPY chiado /usr/testnet_data
 
 COPY jwtsecret.hex /jwtsecret

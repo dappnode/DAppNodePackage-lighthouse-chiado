@@ -1,5 +1,5 @@
 ARG UPSTREAM_VERSION
-FROM gnosischain/lighthouse-validator:v2.5.1-chiado
+FROM gnosischain/lighthouse-validator:${UPSTREAM_VERSION}-chiado
 
 RUN apt-get update && apt-get install curl jq --yes
 # Copy token
