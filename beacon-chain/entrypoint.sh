@@ -18,5 +18,6 @@ exec lighthouse \
     --execution-endpoint $HTTP_ENGINE \
     --execution-jwt "/jwtsecret" \
     --testnet-dir=/usr/testnet_data \
-    --boot-nodes=enr:-Ly4QHj22gbLGiBP_kPXlWQTv0BTNIHTjb9NDu8QzgmPf4scOOS41E_YrrcKbkpdAR87Yru0zZA8PJ_j-af3TKByiQ8Bh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBI6hZ8AQAAb1oAAAAAAAAAgmlkgnY0gmlwhIuQGlmJc2VjcDI1NmsxoQPAo05A-JtbPBWygjdfC4KpWHBOuY609ePLxbcHfVOtkohzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA    $EXTRA_OPTS
+    --boot-nodes=enr:-Ly4QHj22gbLGiBP_kPXlWQTv0BTNIHTjb9NDu8QzgmPf4scOOS41E_YrrcKbkpdAR87Yru0zZA8PJ_j-af3TKByiQ8Bh2F0dG5ldHOIAAAAAAAAAACEZXRoMpBI6hZ8AQAAb1oAAAAAAAAAgmlkgnY0gmlwhIuQGlmJc2VjcDI1NmsxoQPAo05A-JtbPBWygjdfC4KpWHBOuY609ePLxbcHfVOtkohzeW5jbmV0cwCDdGNwgiMog3VkcIIjKA \
+    $EXTRA_OPTS
 
